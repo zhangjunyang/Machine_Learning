@@ -1,6 +1,10 @@
+# 少量训练集
+# -*- coding:utf-8 -*- 
 from sklearn import svm
+
 x = [[2, 0], [1, 1], [3, 3],[2,6]]
 y = [0, 0, 1,2]
+
 clf = svm.SVC()
 clf.fit(x, y)
 
