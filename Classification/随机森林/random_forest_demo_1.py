@@ -1,5 +1,13 @@
-#随机森林回归器的使用
+# # Classification and Regression Tree Algorithm
+# def decision_tree(train, test, max_depth, min_size):
+#     tree = build_tree(train, max_depth, min_size)
+#     predictions = list()
+#     for row in test:
+#         prediction = predict(tree, row)
+#         predictions.append(prediction)
+#     return(predictions)
 
+#随机森林回归器的使用
 from sklearn.tree import DecisionTreeRegressor  
 from sklearn.ensemble import RandomForestRegressor  
 import numpy as np  
@@ -16,6 +24,11 @@ rf.fit(iris.data[:150],iris.target[:150])#进行模型的训练
 instance=iris.data[[100,109]]  
 print(instance)
 rf.predict(instance[[0]])
+rf.predict(instance[[1]])
 print('instance 0 prediction；',rf.predict(instance[[0]]))
 print( 'instance 1 prediction；',rf.predict(instance[[1]]))
 print(iris.target[100],iris.target[109])  
+
+
+
+
