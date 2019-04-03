@@ -8,6 +8,11 @@ training_epochs = 100
 x_train = np.linspace(-1, 1, 101)
 y_train = 2 * x_train + np.random.randn(*x_train.shape) * 0.33
 
+# tf.placeholder(dtype, shape=None, name=None)
+# 此函数可以理解为形参，用于定义过程，在执行的时候再赋具体的值
+# placeholder()函数是在神经网络构建graph的时候在模型中的占位，
+# 此时并没有把要输入的数据传入模型，它只会分配必要的内存。等建立session，
+# 在会话中，运行模型的时候通过feed_dict()函数向占位符喂入数据。
 X = tf.placeholder("float")
 Y = tf.placeholder("float")
 def model(X, w):

@@ -15,15 +15,11 @@ def predict(x, b0, b1):
     return b0 + x*b1
 
 x = [1, 3, 2, 1, 3]
-y = [14, 24, 18, 17, 27]    
-
+y = [14, 24, 18, 17, 27]
 
 b0, b1 = fitSLR(x, y)
-
 print("intercept:", b0, " slope:", b1)
 
 x_test = 6
-
-y_test = predict(6, b0, b1)
-
+y_test = predict(x_test, b0, b1)
 print("y_test:", y_test)
