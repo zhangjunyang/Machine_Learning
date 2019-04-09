@@ -1,12 +1,3 @@
-# # Classification and Regression Tree Algorithm
-# def decision_tree(train, test, max_depth, min_size):
-#     tree = build_tree(train, max_depth, min_size)
-#     predictions = list()
-#     for row in test:
-#         prediction = predict(tree, row)
-#         predictions.append(prediction)
-#     return(predictions)
-
 # 随机森林分类器、决策树、extra树分类器的比较
 from sklearn.model_selection import cross_val_score
 from sklearn.datasets import make_blobs
@@ -21,7 +12,6 @@ scores = cross_val_score(clf, X, y)
 print(scores)
 print(scores.mean())                             
 
-
 clf = RandomForestClassifier(n_estimators=10, max_depth=None,min_samples_split=2, random_state=0)
 scores = cross_val_score(clf, X, y)
 print(scores)
@@ -31,3 +21,12 @@ clf = ExtraTreesClassifier(n_estimators=10, max_depth=None,min_samples_split=2, 
 scores = cross_val_score(clf, X, y)
 print(scores)
 print(scores.mean())
+
+# Classification and Regression Tree Algorithm
+# def decision_tree(train, test, max_depth, min_size):
+#     tree = build_tree(train, max_depth, min_size)
+#     predictions = list()
+#     for row in test:
+#         prediction = predict(tree, row)
+#         predictions.append(prediction)
+#     return(predictions)
